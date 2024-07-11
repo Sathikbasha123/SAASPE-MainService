@@ -1,0 +1,137 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saaspe-microservice
+  namespace: dev
+  labels:
+    app: saaspe-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saaspe-microservice
+  template:
+    metadata:
+      name: saaspe-microservice
+      labels:
+        app: saaspe-microservice
+    spec:
+      priorityClassName: mid-priority-pod
+      containers:
+        - name: saaspe-microservice
+          image: saaspe.azurecr.io/saaspeapi:${VERSION}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+          livenessProbe:
+            httpGet:
+              port: 6060
+              path: /actuator/health/liveness
+            initialDelaySeconds: 60
+            initialDelaySeconds: 60
+            periodSeconds: 60
+          readinessProbe:
+            httpGet:
+              port: 6060
+              path: /actuator/health/readiness
+            initialDelaySeconds: 60
+            initialDelaySeconds: 60
+            periodSeconds: 60
+          resources:
+            requests:
+              memory: "312Mi"
+              cpu: "350m"
+            limits:
+              memory: "512Mi"
+              cpu: "512m"
+          env:
+           - name: SPRING_DATASOURCE_URL       
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: POSTGRES_URL        
+           - name: SPRING_DATASOURCE_USERNAME    
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: POSTGRES_USERNAME
+           - name: SPRING_DATASOURCE_PASSWORD    
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: POSTGRES_PASSWORD
+           - name: SPRING_DATA_MONGODB_CLOUD_HOST    
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_CLOUD_HOST
+           - name: SPRING_DATA_MONGODB_CLOUD_USERNAME   
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_CLOUD_USERNAME
+           - name: SPRING_DATA_MONGODB_CLOUD_PASSWORD   
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_CLOUD_PASSWORD
+           - name: SPRING_DATA_MONGODB_CLOUD_DATABASE  
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_CLOUD_DATABASE                                 
+           - name: SPRING_DATA_MONGODB_MARKETPLACE_HOST  
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_MARKETPLACE_HOST
+           - name: SPRING_DATA_MONGODB_MARKETPLACE_USERNAME
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_MARKETPLACE_USERNAME
+           - name: SPRING_DATA_MONGODB_MARKETPLACE_PASSWORD
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_MARKETPLACE_PASSWORD
+           - name: SPRING_DATA_MONGODB_MARKETPLACE_DATABASE
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_MARKETPLACE_DATABASE
+           - name: CURRENCY_DATASOURCE_URL
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: CURRENCY_URL  
+           - name: CURRENCY_DATASOURCE_USERNAME
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: CURRENCY_USERNAME
+           - name: CURRENCY_DATASOURCE_PASSWORD
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: CURRENCY_PASSWORD                                   
+           - name: SPRING_DATA_MONGODB_DOCUSIGN_HOST
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_DOCUSIGN_HOST
+           - name: SPRING_DATA_MONGODB_DOCUSIGN_USERNAME
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_DOCUSIGN_USERNAME
+           - name: SPRING_DATA_MONGODB_DOCUSIGN_PASSWORD
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_DOCUSIGN_PASSWORD
+           - name: SPRING_DATA_MONGODB_DOCUSIGN_DATABASE
+             valueFrom: 
+               configMapKeyRef:
+                 name: saaspe-microservices-config
+                 key: MONGODB_DOCUSIGN_DATABASE

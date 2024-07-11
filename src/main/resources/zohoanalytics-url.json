@@ -1,0 +1,10 @@
+{
+	"accessToken": "{host}/zohoanalytics/getAccessToken",
+	"generateToken": "{host}/zohoanalytics/generateToken",
+	"assignResource": "{host}/zohoanalytics/user/inviteUser",
+	"deassginResource": "{host}/zohoanalytics/user/revokeAccess",
+	"usersList": "{host}/zohoanalytics/user/list",
+	"organizationList": "{host}/zohoanalytics/organization/list",
+	"subscriptionDetails": "{host}/zohoanalytics/subscritpion/details",
+	"saveOrganizationDetails":"{host}/zohoanalytics/saveOrganizationDetails"
+}

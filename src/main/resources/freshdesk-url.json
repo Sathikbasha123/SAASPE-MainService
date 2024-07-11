@@ -1,0 +1,7 @@
+{
+	"accountDetails": "{host}/freshdesk/account",
+	"inviteUser":"{host}/freshdesk/user/create",
+	"revokeUserAccess":"{host}/freshdesk/user/revokeAccess",
+	"userList":"{host}/freshdesk/user/list",
+	"searchUser":"{host}/freshdesk/user/search"
+}

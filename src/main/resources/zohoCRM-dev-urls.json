@@ -1,0 +1,16 @@
+{
+	"getGrantCode": "{host}/zohocrm/oauth/getGrantToken",
+	"getToken": "{host}/zohocrm/oauth/getAccessToken",
+	"generateAccessToken": "{host}/zohocrm/oauth/getRefreshToken",
+	"createUser": "{host}/zohocrm/user/addUser",
+	"updateUser": "{host}/zohocrm/user/updateUser",
+	"getUser": "{host}/zohocrm/user/getUser",
+	"getOrganizationUser": "{host}/zohocrm/user/getOrganizationUser",
+	"deleteUser": "{host}/zohocrm/user/deleteUser",
+	"getProfiles": "{host}/zohocrm/user/profiles",
+	"getRoles": "{host}/zohocrm/user/roles",
+	"getLicenseDetails": "{host}/zohocrm/organization/getLicenseDetails",
+	"getOrganizationDetails": "{host}/zohocrm/organization/getOrganization",
+	"getUserId": "{host}/zohocrm/user/getUserId",
+	"createUserByURL": "{host}/zohocrm/user/createUser"
+}

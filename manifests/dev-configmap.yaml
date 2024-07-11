@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: saaspe-microservices-config
+  namespace: dev
+  labels:
+    app: saaspe-microservice
+data:
+  POSTGRES_URL: jdbc:postgresql://postgresdev-sit-svc:5432/postgressit
+  POSTGRES_USERNAME: saaspeadmin
+  POSTGRES_PASSWORD: fG7GE9RhjqXODQb
+  MONGODB_MARKETPLACE_HOST: mongodb-sit-svc
+  MONGODB_CLOUD_HOST: mongodb-sit-svc
+  MONGODB_CLOUD_USERNAME: saaspeadmin
+  MONGODB_CLOUD_PASSWORD: 6a1LzfgGNJMPjJhyn362
+  MONGODB_CLOUD_DATABASE: cloudSit
+  MONGODB_MARKETPLACE_USERNAME: saaspeadmin
+  MONGODB_MARKETPLACE_PASSWORD: 6a1LzfgGNJMPjJhyn362
+  MONGODB_MARKETPLACE_DATABASE: marketplace
+  CURRENCY_URL: jdbc:postgresql://postgresdev-sit-svc:5432/currency
+  CURRENCY_USERNAME: saaspeadmin
+  CURRENCY_PASSWORD: fG7GE9RhjqXODQb 
+  MONGODB_DOCUSIGN_HOST: mongodb-sit-svc
+  MONGODB_DOCUSIGN_USERNAME: saaspeadmin
+  MONGODB_DOCUSIGN_PASSWORD: 6a1LzfgGNJMPjJhyn362
+  MONGODB_DOCUSIGN_DATABASE: docusignSit

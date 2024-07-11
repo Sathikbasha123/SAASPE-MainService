@@ -1,0 +1,77 @@
+{"properties": [
+  {
+    "name": "swagger.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'swagger.enable'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.host",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.host'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.host",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.host'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.port",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.port'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.username'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.password'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.database",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.database'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.authentication-database",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.authentication-database'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.port",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.port'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.username'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.password'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.authentication-database",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.authentication-database'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.database",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.database'"
+  },
+  {
+    "name": "spring.data.mongodb.marketplace.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.marketplace.uri'"
+  },
+  {
+    "name": "spring.data.mongodb.saaspeazure.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.saaspeazure.uri'"
+  }
+]}

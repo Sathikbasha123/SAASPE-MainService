@@ -1,0 +1,56 @@
+trigger:
+  - main
+  - dev
+  - sit
+  - jnt
+
+pr: none
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+    major-minor: "prod.1.0"
+    revision: $[ counter(variables['major-minor'],0) ]
+    env: "prod"
+  ${{ elseif eq(variables['Build.SourceBranchName'], 'jnt') }}:
+    major-minor: "jnt.1.0"
+    revision: $[ counter(variables['major-minor'],0) ]
+    env: "jnt"
+  ${{ elseif eq(variables['Build.SourceBranchName'], 'sit') }}:
+    major-minor: "sit.1.0"
+    revision: $[ counter(variables['major-minor'],0) ]
+    env: "sit"
+  ${{ elseif eq(variables['Build.SourceBranchName'], 'dev') }}:
+    major-minor: "dev.1.0"
+    revision: $[ counter(variables['major-minor'],0) ]
+    env: "dev"
+
+stages:
+  - stage: "Build"
+    jobs:
+      - job: UpdateVars
+        steps:
+        - task: AzureCLI@2
+          displayName: 'Update image version in variable group'
+          inputs:
+            azureSubscription: 'saaspe-resource-connection'
+            scriptType: 'pscore'
+            scriptLocation: 'inlineScript'
+            inlineScript: |
+              az extension add --name azure-devops
+              az pipelines variable-group variable list --group-id 4 --org "https://dev.azure.com/saaspe-backend" --project "saaspe"
+              az pipelines variable-group variable update --group-id 4 --name "$(env)" --value "$(major-minor).$(revision)" --org "https://dev.azure.com/saaspe-backend" --project "saaspe"
+          env:
+            AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
+      - job: Dockerizing
+        steps:
+          - task: Docker@2
+            displayName: "Build image and publish to acr"
+            inputs:
+              containerRegistry: 'saaspe-public-hub'
+              repository: 'saaspeapi'
+              command: 'buildAndPush'
+              Dockerfile: '**/Dockerfile'
+              tags: '$(major-minor).$(revision)'

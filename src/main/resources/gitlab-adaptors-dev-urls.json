@@ -1,0 +1,17 @@
+{
+	"authURL": "{host}/v1/gitlab/getOAuthURL",
+	"accessToken": "{host}/v1/gitlab/getAccessToken",
+	"generateToken": "{host}/v1/gitlab/getRefreshToken",
+	"userProfile": "{host}/v1/gitlab/profile",
+	"assignResource": "{host}/v1/gitlab/addMemberToGroup",
+	"deassginResource": "{host}/v1/gitlab/revokeGroupMember",
+	"userGroups": "{host}/v1/gitlab/getGroups",
+	"groupProject": "{host}/v1/gitlab/getProjects",
+	"findUser": "{host}/v1/gitlab/findUsers",
+	"accessRoles": "{host}/v1/gitlab/getAccessRoles",
+	"subscriptionInfo": "{host}/v1/gitlab/getGroupSubsInfo",
+	"usersList": "{host}/v1/gitlab/getAllUsers",
+	"resourceMembers": "{host}/v1/gitlab/getResourceMembers",
+	"invitationList":"{host}/v1/gitlab/listGroupInvitations",
+	"revokeInvitation":"{host}/v1/gitlab/deleteUserInvitation"
+}

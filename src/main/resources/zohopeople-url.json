@@ -1,0 +1,9 @@
+{
+	"authURL": "{host}/zohoPeople/getAuthUri",
+	"accessToken": "{host}/zohoPeople/getAccessToken",
+	"generateToken": "{host}/zohoPeople/generateToken",
+	"assignResource": "{host}/zohoPeople/user/inviteUser",
+	"deassginResource": "{host}/zohoPeople/user/revokeAccess",
+	"usersList": "{host}/zohoPeople/user/list",
+	"searchUser": "{host}/zohoPeople/user/findByEmail"
+}

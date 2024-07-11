@@ -1,0 +1,7 @@
+{
+  "generateToken":"{host}/salesforce/generateToken",
+  "createUser":"{host}/salesforce/user/create",
+  "revokeAccess":"{host}/salesforce/user/remove",
+  "userList":"{host}/salesforce/user/list",
+  "licenseDetails":"{host}/salesforce/licenseDetails"
+}

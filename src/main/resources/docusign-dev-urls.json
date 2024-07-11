@@ -1,0 +1,18 @@
+{
+	"createEnvelopeMultiple": "{host}/createEnvelope",
+	"getEnvelopeById": "{host}/envelope/",
+	"getListOfEnvelopes": "{host}/getListOfEnvelopes/envelopeids",
+	"updateTemplate": "{host}/update/template/{templateId}",
+	"createTemplate": "{host}/create/template",
+	"auditLogs": "{host}/audit/",
+	"users": "{host}/users",
+	"envelopeDocuments": "{host}/getEnvelopeDocuments/{envelopeId}/{documentId}",
+	"listEnvelopeRecipients": "{host}/listEnvelopeRecipients/{envelopeId}",
+	"envelopeDocumentDetails": "{host}/getEnvelopeDocumentDetails/{envelopeId}",
+	"listTemplateById": "{host}/template/{templateId}",
+	"templates": "{host}/templates",
+	"templateDocuments": "{host}/getTemplateDocuments/{templateId}/{documentId}",
+	"getConsent": "{host}/getConsent",
+	"user": "{host}/get/user",
+	"createEnvelope": "/createEnvelope"
+}

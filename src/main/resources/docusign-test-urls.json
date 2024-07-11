@@ -1,0 +1,9 @@
+{
+	"createEnvelopeMultiple": "http://localhost:8085/createEnvelopeMultiple",
+	"getEnvelopeById": "http://localhost:8085/envelope/",
+	"getListOfEnvelopes": "http://localhost:8085/getListOfEnvelopes/envelopeids",
+	"updateTemplate": "http://localhost:8085/update/template/{templateId}",
+	"createTemplate": "http://localhost:8085/create/template",
+	"auditLogs": "http://localhost:8085/audit/",
+	"users": "http://localhost:8085/users"
+}

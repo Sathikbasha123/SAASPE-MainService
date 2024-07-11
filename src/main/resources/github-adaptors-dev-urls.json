@@ -1,0 +1,13 @@
+{
+  "authURL": "{host}/GitHub/AuthUri",
+  "token": "{host}/GitHub/getToken",
+  "getUser": "{host}/GitHub/getUser",
+  "inviteUser": "{host}/GitHub/inviteUser",
+  "getMembers": "{host}/GitHub/getMembers",
+  "actionsBilling": "{host}/GitHub/billing/actions",
+  "packagesBilling": "{host}/GitHub/billing/packages",
+  "sharedStorageBilling": "{host}/GitHub/billing/shared-storage",
+  "removeMember": "{host}/GitHub/remove/organizationMember",
+  "updateMembership": "{host}/GitHub/update/memberRole",
+  "getOrgDetails": "{host}/GitHub/org/details"
+}

@@ -1,0 +1,11 @@
+{
+	"authUrl": "{host}/v1/quickBooks/company/authCodeUrl",
+	"accessTokenUrl": "{host}/v1/quickBooks/company/accessToken",
+	"refreshTokenUrl": "{host}/v1/quickBooks/company/refreshToken",
+	"usersListUrl": "{host}/v1/quickBooks/company/getUsers",
+	"companyInfoUrl": "{host}/v1/quickBooks/company/getInfo",
+	"licenseUrl": "{host}/v1/quickBooks/company/licenseCount",
+	"addUserUrl": "{host}/v1/quickBooks/company/addUser",
+	"deleteUserUrl": "{host}/v1/quickBooks/company/deleteUser",
+	"userDetailsByEmailUrl": "{host}/v1/quickBooks/company/userDetail"
+}

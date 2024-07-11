@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Email Confirmation - Signup User</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      html {
+        background: #f1f1f1;
+      }
+
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        padding-bottom: 60px;
+      }
+
+      .main {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        border-spacing: 0;
+        font-family: sans-serif;
+        color: #51505d;
+      }
+
+      .content-table {
+        background-color: #fff;
+        width: 100%;
+        padding: 30px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #29256e;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #51505d;
+      }
+      .code {
+        letter-spacing: 10px;
+      }
+      .primary {
+        background: #29256e;
+        color: #fff;
+        border: 0;
+        width: 100%;
+        max-width: 300px;
+        padding: 8px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center class="wrapper">
+      <table class="main" width="100%">
+        <tr>
+          <td height="60px" style="text-align: center">
+            <a href="{{hostName}}" target="_blank">
+              <img
+                src="https://saaspemedia.blob.core.windows.net/images/branding/saaspe-logo.png?sv=2021-06-08&ss=bfqt&srt=co&sp=rtfx&se=2023-06-09T16:07:38Z&st=2022-08-11T08:07:38Z&spr=https,http&sig=j%2F3A6Z%2F%2F08HBjnLhR5G6zsqUchudybQAGOpYsFj%2B7h4%3D"
+                alt="saase logo"
+                style="max-width: 200px; height: auto"
+              />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td height="48px"></td>
+        </tr>
+        <tr>
+          <td>
+            <table class="content-table" width="100%">
+              <tr>
+                <td style="text-align: center">
+                  <img
+                    src="https://saaspemedia.blob.core.windows.net/images/branding/misc/email-notification.png?sv=2021-06-08&ss=bfqt&srt=co&sp=rtfx&se=2023-06-09T16:07:38Z&st=2022-08-11T08:07:38Z&spr=https,http&sig=j%2F3A6Z%2F%2F08HBjnLhR5G6zsqUchudybQAGOpYsFj%2B7h4%3D"
+                    alt="Email Notification"
+                    style="max-width: 200px; height: auto"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td height="20"></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">
+                  <h1>Hi, {{name}}!</h1>
+                  <h3>Verify Your Email Address</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <hr style="margin: 0; border-color: #7b7a8c; opacity: 10%" />
+                </td>
+              </tr>
+              <tr>
+                <td height="20"></td>
+              </tr>
+              <tr>
+                <td
+                  style="text-align: center; max-width: 350px; padding: 0 30px"
+                >
+                  <p>
+                    Your SaasPe account has been verified and you can now
+                    confirm your mail by clicking the following button
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td height="36"></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">
+                  <a
+                    href="{{hostName}}/auth/verify?emailAddress={{verifyToken}}&verificationToken={{code}}"
+                    class="primary"
+                    target="_blank"
+                    >Click to verify email</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td height="36"></td>
+              </tr>
+              <tr>
+                <td
+                  style="text-align: center; max-width: 350px; padding: 0 30px"
+                >
+                  <p>
+                    Enter the following 6-digits authentication code in the
+                    corresponding given filed
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: center">
+                  <h1 class="code">{{code}}</h1>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="text-align: center">
+                  <span style="width: 150px; display: inline-block">
+                    <hr
+                      style="margin: 10; border-color: #7b7a8c; opacity: 10%"
+                    />
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="text-align: center; max-width: 350px; padding: 0 30px"
+                >
+                  <p>
+                    If you didn’t signup for this account you can ignore this
+                    email and the account will be deleted
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="48px"></td>
+        </tr>
+        <tr>
+          <td style="text-align: center">
+            <p>
+              &copy;
+              <span id="copyright">
+                <script>
+                  document
+                    .getElementById("copyright")
+                    .appendChild(
+                      document.createTextNode(new Date().getFullYear())
+                    );
+                </script>
+              </span>
+              SaasPe. All rights reserved
+            </p>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
